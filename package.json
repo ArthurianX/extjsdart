@@ -1,0 +1,19 @@
+{
+  "name": "extjsangulardartcoexistence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "godart": "cd my_angular_dart_project && webdev build && cp -r -f build/ ../extjs/dart",
+    "watchdart": "watch 'npm run godart' ./my_angular_dart_project/lib/",
+    "goextjs": "cd extjs && npm start",
+    "dev": "concurrently --kill-others \"npm run watchdart\" \"npm run goextjs\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "watch": "^1.0.2"
+  }
+}
